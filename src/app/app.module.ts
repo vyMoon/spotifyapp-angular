@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { MusicComponent } from './components/music/music.component';
 
+import { StoreModule } from '@ngrx/store';
+import { appReducers } from './store/reducers/app.reducers';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +21,7 @@ import { MusicComponent } from './components/music/music.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    StoreModule.forRoot(appReducers)
   ],
   providers: [],
   bootstrap: [ AppComponent ]

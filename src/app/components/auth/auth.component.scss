@@ -1,24 +1,24 @@
-.authorisation {
-  position: relative;
+// .authorisation {
+//   position: relative;
 
-  &__container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(36, 34, 34);
-    background-image: url('../../../assets/img/spoty-min.jpg');
-    background-size: cover;
-  }
+//   &__container {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: rgb(36, 34, 34);
+//     background-image: url('../../../assets/img/spoty-min.jpg');
+//     background-size: cover;
+//   }
 
-  &__link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 25px;
-    text-decoration: none;
-    color: rgb(120, 205, 50);
-    transform: translate(-50%, -50%)
-  }
-}
+//   &__link {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     font-size: 25px;
+//     text-decoration: none;
+//     color: rgb(120, 205, 50);
+//     transform: translate(-50%, -50%)
+//   }
+// }

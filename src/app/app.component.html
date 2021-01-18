@@ -1,8 +1,14 @@
- <app-auth *ngIf="!tokens?.access_token"
+ <!-- <app-auth *ngIf="!tokens?.access_token"
   [authLink]="api.authLink"
- ></app-auth>
+ ></app-auth> -->
 
- <app-music
+ <!-- <app-music
   *ngIf="!!tokens?.access_token"
   [tokens]="tokens"
- ></app-music>
+ ></app-music> -->
+
+ <app-auth *ngIf="!(tok | async)?.access_token"
+ [authLink]="api.authLink"
+></app-auth>
+
+<p>{{ (tok | async)?.access_token }} we have token here</p>
