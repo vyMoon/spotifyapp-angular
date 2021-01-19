@@ -12,7 +12,7 @@ import { IUser } from '../../common/interfaces/user.interface';
 })
 export class SpotifyAPIService {
   private appId = '818c23e06b0442dea473b5a767c2ce0e';
-  private appKey = 'e8119862035c4e1987105d8e7e564b09';
+  private appKey = 'da7435a2f1a24b0788e638c742a3c505';
 
   private redirectLink = 'http://localhost:4200';
   private uri = 'https://accounts.spotify.com/';

@@ -14,7 +14,7 @@ import { ITokens } from './common/interfaces/tokens.interface';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
 
@@ -31,26 +31,14 @@ export class AppComponent {
   ) { }
 
   ngOnInit() {
-    console.log(this.tok, '<<< tokens')
-    console.log(this._store, '<<< store')
+    // this.tok.subscribe(data => {console.log(data)})
     this.route.queryParams.subscribe(params => {
       if (params.code) {
         this.api.getAccessToken(params.code).subscribe(tokenData => {
           this.tokens = tokenData;
-          this._store.dispatch(new InsertTokens(tokenData))
-          // console.log(this.tok, '<< with tokens')
-          // this.cd.markForCheck();
+          this._store.dispatch(new InsertTokens(tokenData));
         });
       }
     })
-  }
-
-  ngDoCheck() {
-    console.log('do check')
-    console.log(this.tok, '<< with tokens')
-  }
-
-  ngOnChanges() {
-    console.log('on changes')
   }
 }
