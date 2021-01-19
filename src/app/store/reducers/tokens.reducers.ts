@@ -8,7 +8,7 @@ export const tokenReducers = (state = initialTokensState, action: TokensActions)
         ...state,
         tokens: action.payload,
       }
-      default: 
-        return state;
+    default: 
+      return state;
   }
 }
